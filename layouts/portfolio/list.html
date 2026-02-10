@@ -1,0 +1,63 @@
+{{ define "main" }}
+
+<!-- SVG Defs (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="hexagon" viewBox="0 0 100 115.47">
+      <polygon points="50 0 100 28.87 100 86.6 50 115.47 0 86.6 0 28.87"/>
+    </symbol>
+    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffa97e"/>
+      <stop offset="100%" stop-color="#ed5126"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- Feature Banner -->
+<section class="feature-banner">
+  <div class="feature-banner-content reveal">
+    <h1 class="feature-banner-title">Turning Complex Data<br>into Clear Insights</h1>
+    <p class="feature-banner-subtitle">Data analyst &amp; engineer crafting forecasting pipelines, optimization models, and interactive visualizations.</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="portfolio-section" id="projects">
+  <div class="container">
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="project-grid">
+      {{ range .Pages }}
+      <article class="project-card{{ if .Params.featured }} featured{{ end }} reveal" style="--card-bg: {{ .Params.cardGradient | default "linear-gradient(135deg, #ed5126, #ffa97e)" | safeCSS }}">
+        <a href="{{ .RelPermalink }}">
+          <div class="project-card-image"
+            {{ with .Params.featureImage }}style="background-image: url('{{ . }}')"{{ end }}>
+          </div>
+          <div class="project-card-overlay">
+            <span class="project-card-category">{{ .Params.category }}</span>
+            <h3 class="project-card-title">{{ .Title }}</h3>
+          </div>
+        </a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <h2 class="section-title">About</h2>
+      <p>I'm a data analyst and engineer specializing in turning raw data into actionable insights. With experience spanning forecasting, optimization, and interactive visualization, I build end-to-end analytics solutions that drive real business decisions.</p>
+      <p>My toolkit includes Python, SAS, SQL, and modern data engineering frameworks. I'm passionate about bridging the gap between complex statistical models and clear, compelling storytelling through data.</p>
+    </div>
+    <div class="about-decoration reveal" aria-hidden="true">
+      <svg class="about-hex" viewBox="0 0 100 115.47">
+        <use href="#hexagon" fill="url(#grad-accent)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+{{ end }}

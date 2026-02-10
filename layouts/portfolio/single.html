@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<section class="project-single">
+  <div class="container">
+    <a href="{{ "/portfolio/" | relURL }}" class="back-link">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Back to Projects
+    </a>
+
+    <div class="project-single-header">
+      {{ with .Params.category }}
+      <span class="project-single-category">{{ . }}</span>
+      {{ end }}
+      <h1 class="project-single-title">{{ .Title }}</h1>
+      <p class="project-single-meta">{{ .Date.Format "January 2006" }}</p>
+    </div>
+
+    {{ with .Params.featureImage }}
+    <div class="project-single-image" style="background-image: url('{{ . }}')"></div>
+    {{ else }}
+    <div class="project-single-image" style="background: {{ $.Params.cardGradient | default "linear-gradient(135deg, #ed5126, #ffa97e)" | safeCSS }}"></div>
+    {{ end }}
+
+    <div class="project-single-content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,11 @@
+baseURL = "https://zhuygln.github.io/"
+languageCode = "en-us"
+title = "YZ"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  email = "hello@yz-analytics.com"
+  accent = "#ed5126"
+  description = "Data Analytics Portfolio"
+  github = "https://github.com/zhuygln"
+  linkedin = "https://linkedin.com"
