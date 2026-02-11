@@ -351,6 +351,28 @@ h1, h2, h3 {
   50% { transform: translateY(-18px) rotate(6deg); }
 }
 
+.about-photo {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.about-external-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(240, 230, 255, 0.2);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.about-external-link:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
 /* ===========================
    Single Project Page
    =========================== */
@@ -432,6 +454,48 @@ h1, h2, h3 {
 }
 
 .back-link:hover {
+  color: var(--main-color-secondary);
+}
+
+.project-single-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.project-single-publications {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(240, 230, 255, 0.1);
+}
+
+.project-single-publications h2 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.project-single-publications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-single-publications li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--main-color-opacity);
+}
+
+.project-single-publications a {
+  color: var(--main-color);
+  transition: color 0.2s;
+}
+
+.project-single-publications a:hover {
   color: var(--main-color-secondary);
 }
 

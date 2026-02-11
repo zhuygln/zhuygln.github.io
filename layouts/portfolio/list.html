@@ -16,16 +16,16 @@
 <!-- Feature Banner -->
 <section class="feature-banner">
   <div class="feature-banner-content reveal">
-    <h1 class="feature-banner-title">Turning Complex Data<br>into Clear Insights</h1>
-    <p class="feature-banner-subtitle">Data analyst &amp; engineer crafting forecasting pipelines, optimization models, and interactive visualizations.</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <h1 class="feature-banner-title">Neutrinos and Nucleosynthesis<br>in Compact Object Mergers</h1>
+    <p class="feature-banner-subtitle">Exploring neutrino oscillation, fission in r-process elements, and electromagnetic transients from heavy nuclei radioactive energy transport.</p>
+    <a href="#projects" class="btn">View Research</a>
   </div>
 </section>
 
-<!-- Projects -->
+<!-- Research -->
 <section class="portfolio-section" id="projects">
   <div class="container">
-    <h2 class="section-title reveal">Projects</h2>
+    <h2 class="section-title reveal">Research</h2>
     <div class="project-grid">
       {{ range .Pages }}
       <article class="project-card{{ if .Params.featured }} featured{{ end }} reveal" style="--card-bg: {{ .Params.cardGradient | default "linear-gradient(135deg, #ed5126, #ffa97e)" | safeCSS }}">
@@ -49,13 +49,25 @@
   <div class="container about-grid">
     <div class="about-text reveal">
       <h2 class="section-title">About</h2>
-      <p>I'm a data analyst and engineer specializing in turning raw data into actionable insights. With experience spanning forecasting, optimization, and interactive visualization, I build end-to-end analytics solutions that drive real business decisions.</p>
-      <p>My toolkit includes Python, SAS, SQL, and modern data engineering frameworks. I'm passionate about bridging the gap between complex statistical models and clear, compelling storytelling through data.</p>
+      <p>Yonglin Zhu grew up in Xuzhou, China, where he completed his Bachelor Degree in Science with major in Optical Information Science and Technology, at CUMT. After that, he moved from the east coast of China to the same part of the U.S. and pursued his Ph.D. at North Carolina State University.</p>
+      <p>He worked on computational Condensed Matter Physics and then found more interests in Nuclear Astrophysics. He is working with Gail C. McLaughlin on neutrino oscillation and nucleosynthesis in compact object mergers. His research interests include neutrino oscillation in the dense environment, fission in r-process elements, and electromagnetic transients observables from heavy nuclei radioactive energy transport.</p>
+      <p>
+        <a href="{{ "/img/site/CV_yonglin.pdf" | relURL }}" class="btn" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem; padding:0.6rem 1.5rem;">Download CV</a>
+      </p>
+      <div class="about-links" style="margin-top:1.5rem;">
+        <p style="color:var(--text-primary); font-weight:500; margin-bottom:0.75rem;">Also Find Me Here</p>
+        <div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+          <a href="https://www.nndc.bnl.gov/fire/#" target="_blank" rel="noopener noreferrer" class="about-external-link">FIRE</a>
+          <a href="https://scholar.google.com/citations?user=5zl5bT4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="about-external-link">Google Scholar</a>
+          <a href="https://www.jinaweb.org/about-jina/people/yonglin-zhu" target="_blank" rel="noopener noreferrer" class="about-external-link">JINA-CEE</a>
+          <a href="https://yzhu14.wordpress.ncsu.edu/" target="_blank" rel="noopener noreferrer" class="about-external-link">NC State</a>
+          <a href="http://fribtheoryalliance.org/content/signup/show_members.php" target="_blank" rel="noopener noreferrer" class="about-external-link">FRIB</a>
+          <a href="http://inspirehep.net/author/profile/Yong.Lin.Zhu.1" target="_blank" rel="noopener noreferrer" class="about-external-link">InspireHEP</a>
+        </div>
+      </div>
     </div>
-    <div class="about-decoration reveal" aria-hidden="true">
-      <svg class="about-hex" viewBox="0 0 100 115.47">
-        <use href="#hexagon" fill="url(#grad-accent)"/>
-      </svg>
+    <div class="about-decoration reveal">
+      <img src="{{ "/img/site/zhu.jpg" | relURL }}" alt="Yong-Lin Zhu" class="about-photo">
     </div>
   </div>
 </section>

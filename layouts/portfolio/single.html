@@ -6,7 +6,7 @@
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="15 18 9 12 15 6"/>
       </svg>
-      Back to Projects
+      Back to Research
     </a>
 
     <div class="project-single-header">
@@ -26,6 +26,25 @@
     <div class="project-single-content">
       {{ .Content }}
     </div>
+
+    {{ with .Params.publications }}
+    <div class="project-single-publications">
+      <h2>Publications</h2>
+      <ul>
+        {{ range . }}
+        <li>
+          {{ .authors }} {{ .title }}. <em>{{ .journal }}</em>
+          {{ with .arxiv }}
+          — <a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>
+          {{ end }}
+          {{ with .doi }}
+          — <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
   </div>
 </section>
 

@@ -1,11 +1,12 @@
 baseURL = "https://zhuygln.github.io/"
 languageCode = "en-us"
-title = "YZ"
+title = "Yong-Lin Zhu"
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  email = "hello@yz-analytics.com"
+  email = "zhuygln@gmail.com"
   accent = "#ed5126"
-  description = "Data Analytics Portfolio"
+  description = "Nuclear Astrophysics Research"
   github = "https://github.com/zhuygln"
-  linkedin = "https://linkedin.com"
+  scholar = "https://scholar.google.com/citations?user=5zl5bT4AAAAJ&hl=en"
+  inspirehep = "http://inspirehep.net/author/profile/Yong.Lin.Zhu.1"
